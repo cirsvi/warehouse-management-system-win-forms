@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.productsLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -35,6 +37,9 @@
             this.editBtn = new System.Windows.Forms.Button();
             this.newBtn = new System.Windows.Forms.Button();
             this.gridProducts = new System.Windows.Forms.DataGridView();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CurrentStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridProducts)).BeginInit();
@@ -104,6 +109,7 @@
             this.editBtn.TabIndex = 1;
             this.editBtn.Text = "Edit";
             this.editBtn.UseVisualStyleBackColor = false;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // newBtn
             // 
@@ -127,9 +133,31 @@
             // 
             this.gridProducts.AllowUserToAddRows = false;
             this.gridProducts.AllowUserToDeleteRows = false;
+            this.gridProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridProducts.BackgroundColor = System.Drawing.Color.White;
+            this.gridProducts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductName,
+            this.ProductCategoryName,
+            this.CurrentStock});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridProducts.DefaultCellStyle = dataGridViewCellStyle4;
             this.gridProducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridProducts.Enabled = false;
             this.gridProducts.Location = new System.Drawing.Point(0, 90);
             this.gridProducts.MultiSelect = false;
             this.gridProducts.Name = "gridProducts";
@@ -140,6 +168,30 @@
             this.gridProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridProducts.Size = new System.Drawing.Size(582, 376);
             this.gridProducts.TabIndex = 2;
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "ProductName";
+            this.ProductName.HeaderText = "Product";
+            this.ProductName.MinimumWidth = 6;
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            // 
+            // ProductCategoryName
+            // 
+            this.ProductCategoryName.DataPropertyName = "ProductCategoryName";
+            this.ProductCategoryName.HeaderText = "Category";
+            this.ProductCategoryName.MinimumWidth = 6;
+            this.ProductCategoryName.Name = "ProductCategoryName";
+            this.ProductCategoryName.ReadOnly = true;
+            // 
+            // CurrentStock
+            // 
+            this.CurrentStock.DataPropertyName = "CurrentStock";
+            this.CurrentStock.HeaderText = "Current Stock";
+            this.CurrentStock.MinimumWidth = 6;
+            this.CurrentStock.Name = "CurrentStock";
+            this.CurrentStock.ReadOnly = true;
             // 
             // ProductsView
             // 
@@ -168,5 +220,8 @@
         private System.Windows.Forms.Button editBtn;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.DataGridView gridProducts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductCategoryName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CurrentStock;
     }
 }

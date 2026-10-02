@@ -11,7 +11,7 @@ namespace WarehouseManagementSystem.Data
 {
     internal class CategoryRepository
     {
-        string connection = System.Configuration.ConfigurationManager.ConnectionStrings["WarehouseDB"].ConnectionString;
+        private string connection = System.Configuration.ConfigurationManager.ConnectionStrings["WarehouseDB"].ConnectionString;
 
         public List<Category> GetAll()
         {

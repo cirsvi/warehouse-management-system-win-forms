@@ -16,7 +16,7 @@ namespace WarehouseManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProductAddEditForm());
+            Application.Run(new MainForm());
         }
     }
 }
