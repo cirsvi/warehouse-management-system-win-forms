@@ -150,6 +150,7 @@
             // 
             this.cancelBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cancelBtn.BackColor = System.Drawing.Color.DarkGray;
+            this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelBtn.FlatAppearance.BorderSize = 0;
             this.cancelBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.cancelBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
