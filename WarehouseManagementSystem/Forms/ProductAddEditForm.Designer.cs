@@ -77,7 +77,9 @@
             // 
             // productNameInput
             // 
+            this.productNameInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.productNameInput.Location = new System.Drawing.Point(18, 39);
+            this.productNameInput.MaxLength = 255;
             this.productNameInput.Name = "productNameInput";
             this.productNameInput.Size = new System.Drawing.Size(539, 30);
             this.productNameInput.TabIndex = 1;
@@ -103,6 +105,7 @@
             // 
             // categoryComboBox
             // 
+            this.categoryComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.categoryComboBox.FormattingEnabled = true;
             this.categoryComboBox.Location = new System.Drawing.Point(18, 39);
             this.categoryComboBox.Name = "categoryComboBox";

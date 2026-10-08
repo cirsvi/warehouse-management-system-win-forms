@@ -7,14 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WarehouseManagementSystem.Session;
 
 namespace WarehouseManagementSystem
 {
     public partial class MainForm : Form
     {
+        public bool logoutRequested = false;
         public MainForm()
         {
             InitializeComponent();
+
+            if (SessionManager.RoleName != "Admin")
+            {
+                usersBtn.Hide();
+            }
+
+            userMenuButton.Text = SessionManager.Username;
         }
 
         private void categoriesBtn_Click(object sender, EventArgs e)
@@ -28,6 +37,31 @@ namespace WarehouseManagementSystem
             var view = new ProductsView();
             view.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(view);
+        }
+
+        private void usersBtn_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var view = new UsersView();
+            view.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(view);
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePasswordForm form = new ChangePasswordForm();
+            form.ShowDialog();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            logoutRequested = true;
+            SessionManager.Clear();
         }
     }
 }

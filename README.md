@@ -14,6 +14,9 @@
 <a href="https://www.flaticon.com/free-icons/refresh" title="refresh icons">Refresh icons created by Arkinasi - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/export" title="export icons">Export icons created by Shashank Singh - Flaticon</a>
 https://smallpngtools.com/change-png-color.php
+<a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Magnific - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/logout" title="logout icons">Logout icons created by Pixel perfect - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/password" title="password icons">Password icons created by Pixel perfect - Flaticon</a>
 
 ## Project Structure
 ```

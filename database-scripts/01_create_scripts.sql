@@ -21,7 +21,10 @@ CREATE TABLE Users (
     isActive BIT NOT NULL DEFAULT 1,
     roleID INT NOT NULL,
     createdOn DATETIME2 DEFAULT GETDATE() NOT NULL,
-    CONSTRAINT FK_Users_Roles FOREIGN KEY (roleID) REFERENCES Roles(roleID)
+    alteredLastByID INT NULL,
+    alteredLastOn  DATETIME2,
+    CONSTRAINT FK_Users_Roles FOREIGN KEY (roleID) REFERENCES Roles(roleID),
+    CONSTRAINT FK_Users_Users_Alter FOREIGN KEY (alteredLastByID) REFERENCES Users(userID)
 );
 
 CREATE TABLE Categories (

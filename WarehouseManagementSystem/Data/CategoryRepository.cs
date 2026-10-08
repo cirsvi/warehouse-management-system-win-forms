@@ -15,7 +15,7 @@ namespace WarehouseManagementSystem.Data
 
         public List<Category> GetAll()
         {
-            string query = "SELECT categoryID, categoryName FROM Categories ORDER BY categoryName";
+            string query = "SELECT categoryID, categoryName FROM Categories WHERE isActive = 1 ORDER BY categoryName";
             List<Category> categories = new List<Category>();
 
             try

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WarehouseManagementSystem.Models;
+using WarehouseManagementSystem.Session;
 
 namespace WarehouseManagementSystem.Data
 {
@@ -62,7 +63,7 @@ namespace WarehouseManagementSystem.Data
                 {
                     cmd.Parameters.AddWithValue("@productName", product.ProductName);
                     cmd.Parameters.AddWithValue("@categoryId", product.ProductCategoryId);
-                    cmd.Parameters.AddWithValue("@createdById", 1); // CHANGE LATER!
+                    cmd.Parameters.AddWithValue("@createdById", SessionManager.UserId);
 
                     cmd.ExecuteNonQuery();
                 }
@@ -82,7 +83,7 @@ namespace WarehouseManagementSystem.Data
                 {
                     cmd.Parameters.AddWithValue("@productName", product.ProductName);
                     cmd.Parameters.AddWithValue("@categoryId", product.ProductCategoryId);
-                    cmd.Parameters.AddWithValue("@userId", 1); // CHANGE LATER!
+                    cmd.Parameters.AddWithValue("@userId", SessionManager.UserId);
                     cmd.Parameters.AddWithValue("@id", id);
 
                     cmd.ExecuteNonQuery();
@@ -100,7 +101,7 @@ namespace WarehouseManagementSystem.Data
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@userId", 1);
+                    cmd.Parameters.AddWithValue("@userId", SessionManager.UserId);
                     cmd.Parameters.AddWithValue("@id", id);
 
                     cmd.ExecuteNonQuery();
@@ -134,7 +135,8 @@ namespace WarehouseManagementSystem.Data
 
         public int FindInactiveByName(string name)
         {
-            string query = "SELECT productID FROM Products WHERE productName = @name AND isActive = 0";
+            string query = "SELECT productID FROM Products " +
+                           "WHERE productName = @name AND isActive = 0";
             int id = -1;
 
             using (SqlConnection conn = new SqlConnection(connection))
@@ -146,7 +148,6 @@ namespace WarehouseManagementSystem.Data
                     cmd.Parameters.AddWithValue("@name", name);
 
                     object result = cmd.ExecuteScalar();
-
                     id = (result == null || result == DBNull.Value) ? -1 : Convert.ToInt32(result);
                 }
             }
@@ -156,7 +157,8 @@ namespace WarehouseManagementSystem.Data
 
         public Product GetById(int id) 
         {
-            string query = "SELECT productName, categoryId FROM Products WHERE Products.productID=@id";
+            string query = "SELECT productName, categoryId FROM Products " +
+                           "WHERE Products.productID=@id";
             Product product =  new Product();
 
             using(SqlConnection conn = new SqlConnection(connection))
@@ -216,7 +218,7 @@ namespace WarehouseManagementSystem.Data
                 {
                     using (SqlCommand cmd = new SqlCommand(querySoft, conn))
                     {
-                        cmd.Parameters.AddWithValue("@userId", 1); // CHANGE LATER!
+                        cmd.Parameters.AddWithValue("@userId", SessionManager.UserId);
                         cmd.Parameters.AddWithValue("@id", id);
                         cmd.ExecuteNonQuery();
                     }
