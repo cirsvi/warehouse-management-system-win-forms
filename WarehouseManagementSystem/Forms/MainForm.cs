@@ -28,7 +28,10 @@ namespace WarehouseManagementSystem
 
         private void categoriesBtn_Click(object sender, EventArgs e)
         {
-
+            contentPanel.Controls.Clear();
+            var view = new CategoriesView();
+            view.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(view);
         }
 
         private void productsBtn_Click(object sender, EventArgs e)
