@@ -16,13 +16,8 @@ namespace WarehouseManagementSystem
     {
         private int productId = 0;
 
-
-        public ProductAddEditForm()
+        private void PopulateCategory()
         {
-            InitializeComponent();
-
-            productWindowTitle.Text = "New product";
-
             try
             {
                 CategoryRepository repository = new CategoryRepository();
@@ -31,11 +26,19 @@ namespace WarehouseManagementSystem
                 categoryComboBox.DisplayMember = "CategoryName";
                 categoryComboBox.ValueMember = "CategoryID";
                 categoryComboBox.DataSource = categories;
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show($"Something went wrong. Try again!\nError: {ex.Message}");
             }
-            
+        }
+
+        public ProductAddEditForm()
+        {
+            InitializeComponent();
+
+            productWindowTitle.Text = "New product";
+            PopulateCategory();
         }
 
         public ProductAddEditForm(int productId)
@@ -43,20 +46,14 @@ namespace WarehouseManagementSystem
             InitializeComponent();
 
             productWindowTitle.Text = "Update product";
+            PopulateCategory();
 
             try
             {
-                CategoryRepository catRepository = new CategoryRepository();
-                List<Category> categories = catRepository.GetAll();
-
-                categoryComboBox.DisplayMember = "CategoryName";
-                categoryComboBox.ValueMember = "CategoryID";
-                categoryComboBox.DataSource = categories;
-
                 this.productId = productId;
 
-                ProductRepository prodRepository = new ProductRepository();
-                Product product = prodRepository.GetById(productId);
+                ProductRepository repository = new ProductRepository();
+                Product product = repository.GetById(productId);
 
                 productNameInput.Text = product.ProductName;
                 categoryComboBox.SelectedValue = product.ProductCategoryId;

@@ -113,7 +113,6 @@
             // 
             // roleComboBox
             // 
-            this.roleComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roleComboBox.FormattingEnabled = true;
             this.roleComboBox.Location = new System.Drawing.Point(18, 39);
             this.roleComboBox.Name = "roleComboBox";

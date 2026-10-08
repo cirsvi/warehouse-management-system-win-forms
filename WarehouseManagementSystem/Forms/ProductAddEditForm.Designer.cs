@@ -105,7 +105,6 @@
             // 
             // categoryComboBox
             // 
-            this.categoryComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.categoryComboBox.FormattingEnabled = true;
             this.categoryComboBox.Location = new System.Drawing.Point(18, 39);
             this.categoryComboBox.Name = "categoryComboBox";
