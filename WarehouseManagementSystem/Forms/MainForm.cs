@@ -66,5 +66,13 @@ namespace WarehouseManagementSystem
             logoutRequested = true;
             SessionManager.Clear();
         }
+
+        private void suppliersBtn_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var view = new SuppliersView();
+            view.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(view);
+        }
     }
 }

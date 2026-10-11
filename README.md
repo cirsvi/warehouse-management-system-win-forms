@@ -17,6 +17,10 @@ https://smallpngtools.com/change-png-color.php
 <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Magnific - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/logout" title="logout icons">Logout icons created by Pixel perfect - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/password" title="password icons">Password icons created by Pixel perfect - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/price" title="price icons">Price icons created by Magnific - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/supplier" title="supplier icons">Supplier icons created by Slameticon - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/categories" title="categories icons">Categories icons created by Creatype - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Dreamstale - Flaticon</a>
 
 ## Project Structure
 ```

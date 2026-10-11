@@ -56,9 +56,9 @@ CREATE TABLE Products (
 CREATE TABLE Suppliers (
     supplierID INT PRIMARY KEY IDENTITY,
     supplierName NVARCHAR(100) NOT NULL,
-    contactPerson NVARCHAR(100),
-    phone NVARCHAR(50) UNIQUE NULL,
-    email NVARCHAR(255) UNIQUE NULL,
+    contactPerson NVARCHAR(100) NOT NULL,
+    phone NVARCHAR(50) NULL,
+    email NVARCHAR(255) NULL,
     isActive BIT NOT NULL DEFAULT 1,
     createdByID INT NOT NULL,
     alteredLastByID INT,
@@ -75,7 +75,7 @@ CREATE TABLE SupplierProduct (
     createdByID INT NOT NULL,
     alteredLastByID INT,
     createdOn DATETIME2 DEFAULT GETDATE() NOT NULL,
-    alteredLastOn  DATETIME2,
+    alteredLastOn DATETIME2,
     CONSTRAINT PK_SupplierProduct PRIMARY KEY (supplierID, productID),
     CONSTRAINT FK_SupplierProduct_Suppliers FOREIGN KEY (supplierID) REFERENCES Suppliers(supplierID),
     CONSTRAINT FK_SupplierProduct_Product FOREIGN KEY (productID) REFERENCES Products(productID),
@@ -107,5 +107,3 @@ CREATE UNIQUE INDEX UX_Users_Username_Active ON Users(username) WHERE isActive =
 CREATE UNIQUE INDEX UX_Categories_CategoryName_Active ON Categories(categoryName) WHERE isActive = 1;
 CREATE UNIQUE INDEX UX_Products_ProductName_Active ON Products(productName) WHERE isActive = 1;
 CREATE UNIQUE INDEX UX_Suppliers_SupplierName_Active ON Suppliers(supplierName) WHERE isActive = 1;
-CREATE UNIQUE INDEX UX_Suppliers_SupplierPhone_Active ON Suppliers(phone) WHERE isActive = 1;
-CREATE UNIQUE INDEX UX_Suppliers_SupplierEmail_Active ON Suppliers(email) WHERE isActive = 1;

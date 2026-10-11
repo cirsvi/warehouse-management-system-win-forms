@@ -50,6 +50,8 @@
     <Compile Include="Data\CategoryRepository.cs" />
     <Compile Include="Data\ProductRepository.cs" />
     <Compile Include="Data\RolesRepository.cs" />
+    <Compile Include="Data\SupplierProductRepository.cs" />
+    <Compile Include="Data\SupplierRepository.cs" />
     <Compile Include="Data\UserRepository.cs" />
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -75,6 +77,24 @@
     <Compile Include="Forms\CategoryAddEditForm.Designer.cs">
       <DependentUpon>CategoryAddEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ProductForSupplierAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProductForSupplierAddEditForm.Designer.cs">
+      <DependentUpon>ProductForSupplierAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierForProductAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplierForProductAddEditForm.Designer.cs">
+      <DependentUpon>SupplierForProductAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplierAddEditForm.Designer.cs">
+      <DependentUpon>SupplierAddEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserAddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +110,9 @@
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\ProductForSupplier.cs" />
+    <Compile Include="Models\SupplierForProduct.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -102,6 +125,12 @@
     </Compile>
     <Compile Include="Views\CategoriesView.Designer.cs">
       <DependentUpon>CategoriesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SuppliersView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SuppliersView.Designer.cs">
+      <DependentUpon>SuppliersView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UsersView.cs">
       <SubType>UserControl</SubType>
@@ -129,6 +158,15 @@
     <EmbeddedResource Include="Forms\CategoryAddEditForm.resx">
       <DependentUpon>CategoryAddEditForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProductForSupplierAddEditForm.resx">
+      <DependentUpon>ProductForSupplierAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierForProductAddEditForm.resx">
+      <DependentUpon>SupplierForProductAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierAddEditForm.resx">
+      <DependentUpon>SupplierAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserAddEditForm.resx">
       <DependentUpon>UserAddEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CategoriesView.resx">
       <DependentUpon>CategoriesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuppliersView.resx">
+      <DependentUpon>SuppliersView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UsersView.resx">
       <DependentUpon>UsersView.cs</DependentUpon>
