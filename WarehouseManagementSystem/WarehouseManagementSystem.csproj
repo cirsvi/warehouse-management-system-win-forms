@@ -50,6 +50,7 @@
     <Compile Include="Data\CategoryRepository.cs" />
     <Compile Include="Data\ProductRepository.cs" />
     <Compile Include="Data\RolesRepository.cs" />
+    <Compile Include="Data\StockMovementRepository.cs" />
     <Compile Include="Data\SupplierProductRepository.cs" />
     <Compile Include="Data\SupplierRepository.cs" />
     <Compile Include="Data\UserRepository.cs" />
@@ -76,6 +77,18 @@
     </Compile>
     <Compile Include="Forms\CategoryAddEditForm.Designer.cs">
       <DependentUpon>CategoryAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StockMovementShipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StockMovementShipForm.Designer.cs">
+      <DependentUpon>StockMovementShipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StockMovementReceiveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StockMovementReceiveForm.Designer.cs">
+      <DependentUpon>StockMovementReceiveForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ProductForSupplierAddEditForm.cs">
       <SubType>Form</SubType>
@@ -108,8 +121,10 @@
       <DependentUpon>ProductAddEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\MovementType.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\StockMovement.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\ProductForSupplier.cs" />
     <Compile Include="Models\SupplierForProduct.cs" />
@@ -120,6 +135,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Session\SessionManager.cs" />
+    <Compile Include="Views\StockMovementView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StockMovementView.Designer.cs">
+      <DependentUpon>StockMovementView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CategoriesView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -158,6 +179,12 @@
     <EmbeddedResource Include="Forms\CategoryAddEditForm.resx">
       <DependentUpon>CategoryAddEditForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StockMovementShipForm.resx">
+      <DependentUpon>StockMovementShipForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StockMovementReceiveForm.resx">
+      <DependentUpon>StockMovementReceiveForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductForSupplierAddEditForm.resx">
       <DependentUpon>ProductForSupplierAddEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductAddEditForm.resx">
       <DependentUpon>ProductAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StockMovementView.resx">
+      <DependentUpon>StockMovementView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CategoriesView.resx">
       <DependentUpon>CategoriesView.cs</DependentUpon>

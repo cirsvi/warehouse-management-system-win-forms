@@ -23,7 +23,7 @@ namespace WarehouseManagementSystem.Data
                                            "ELSE -StockMovements.quantity END), 0) AS currentStock " +
                            "FROM Products " +
                            "INNER JOIN Categories ON Products.categoryID=Categories.categoryID " +
-                           "LEFT JOIN StockMovements ON StockMovements.productID=Products.productID " +
+                           "LEFT JOIN StockMovements ON StockMovements.productID=Products.productID AND StockMovements.isActive = 1 " +
                            "WHERE Products.isActive = 1 " +
                            "GROUP BY Products.productID, Products.productName, Categories.categoryID, Categories.categoryName " +
                            "ORDER BY productName";

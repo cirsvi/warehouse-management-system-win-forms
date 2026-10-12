@@ -90,6 +90,8 @@ CREATE TABLE StockMovements(
     movementType NVARCHAR(5) NOT NULL CHECK (movementType IN ('IN','OUT')),
     quantity INT NOT NULL,
     movementDate DATETIME2 NOT NULL DEFAULT GETDATE(),
+    note NVARCHAR(255),
+    isActive BIT NOT NULL DEFAULT 1,
     createdByID INT NOT NULL,
     alteredLastByID INT,
     createdOn DATETIME2 DEFAULT GETDATE() NOT NULL,

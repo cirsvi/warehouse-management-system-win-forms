@@ -30,15 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.titlePanel = new System.Windows.Forms.Panel();
-            this.accountTollStrip = new System.Windows.Forms.ToolStrip();
-            this.contentPanel = new System.Windows.Forms.Panel();
+            this.stockMoveBtn = new System.Windows.Forms.Button();
             this.usersBtn = new System.Windows.Forms.Button();
+            this.accountTollStrip = new System.Windows.Forms.ToolStrip();
             this.userMenuButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriesBtn = new System.Windows.Forms.Button();
             this.suppliersBtn = new System.Windows.Forms.Button();
             this.productsBtn = new System.Windows.Forms.Button();
+            this.contentPanel = new System.Windows.Forms.Panel();
             this.titlePanel.SuspendLayout();
             this.accountTollStrip.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +47,7 @@
             // titlePanel
             // 
             this.titlePanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.titlePanel.Controls.Add(this.stockMoveBtn);
             this.titlePanel.Controls.Add(this.usersBtn);
             this.titlePanel.Controls.Add(this.accountTollStrip);
             this.titlePanel.Controls.Add(this.categoriesBtn);
@@ -57,6 +59,49 @@
             this.titlePanel.Name = "titlePanel";
             this.titlePanel.Size = new System.Drawing.Size(1332, 96);
             this.titlePanel.TabIndex = 0;
+            // 
+            // stockMoveBtn
+            // 
+            this.stockMoveBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.stockMoveBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.stockMoveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.stockMoveBtn.FlatAppearance.BorderSize = 0;
+            this.stockMoveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlDark;
+            this.stockMoveBtn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.stockMoveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stockMoveBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stockMoveBtn.ForeColor = System.Drawing.Color.Black;
+            this.stockMoveBtn.Image = ((System.Drawing.Image)(resources.GetObject("stockMoveBtn.Image")));
+            this.stockMoveBtn.Location = new System.Drawing.Point(655, 9);
+            this.stockMoveBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.stockMoveBtn.Name = "stockMoveBtn";
+            this.stockMoveBtn.Size = new System.Drawing.Size(234, 55);
+            this.stockMoveBtn.TabIndex = 7;
+            this.stockMoveBtn.Text = "Stock Movement";
+            this.stockMoveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.stockMoveBtn.UseVisualStyleBackColor = false;
+            this.stockMoveBtn.Click += new System.EventHandler(this.stockMoveBtn_Click);
+            // 
+            // usersBtn
+            // 
+            this.usersBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.usersBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.usersBtn.FlatAppearance.BorderSize = 0;
+            this.usersBtn.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlDark;
+            this.usersBtn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.usersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.usersBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usersBtn.ForeColor = System.Drawing.Color.Black;
+            this.usersBtn.Image = ((System.Drawing.Image)(resources.GetObject("usersBtn.Image")));
+            this.usersBtn.Location = new System.Drawing.Point(981, 9);
+            this.usersBtn.Margin = new System.Windows.Forms.Padding(10, 10, 10, 100);
+            this.usersBtn.Name = "usersBtn";
+            this.usersBtn.Size = new System.Drawing.Size(124, 55);
+            this.usersBtn.TabIndex = 6;
+            this.usersBtn.Text = "Users";
+            this.usersBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.usersBtn.UseVisualStyleBackColor = false;
+            this.usersBtn.Click += new System.EventHandler(this.usersBtn_Click);
             // 
             // accountTollStrip
             // 
@@ -73,37 +118,6 @@
             this.accountTollStrip.Size = new System.Drawing.Size(132, 55);
             this.accountTollStrip.TabIndex = 0;
             this.accountTollStrip.Text = "toolStrip1";
-            // 
-            // contentPanel
-            // 
-            this.contentPanel.BackColor = System.Drawing.Color.White;
-            this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentPanel.Location = new System.Drawing.Point(0, 96);
-            this.contentPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1332, 762);
-            this.contentPanel.TabIndex = 2;
-            // 
-            // usersBtn
-            // 
-            this.usersBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.usersBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.usersBtn.FlatAppearance.BorderSize = 0;
-            this.usersBtn.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlDark;
-            this.usersBtn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.usersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.usersBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usersBtn.ForeColor = System.Drawing.Color.Black;
-            this.usersBtn.Image = ((System.Drawing.Image)(resources.GetObject("usersBtn.Image")));
-            this.usersBtn.Location = new System.Drawing.Point(669, 10);
-            this.usersBtn.Margin = new System.Windows.Forms.Padding(10, 10, 10, 100);
-            this.usersBtn.Name = "usersBtn";
-            this.usersBtn.Size = new System.Drawing.Size(124, 55);
-            this.usersBtn.TabIndex = 6;
-            this.usersBtn.Text = "Users";
-            this.usersBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.usersBtn.UseVisualStyleBackColor = false;
-            this.usersBtn.Click += new System.EventHandler(this.usersBtn_Click);
             // 
             // userMenuButton
             // 
@@ -177,7 +191,7 @@
             this.suppliersBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.suppliersBtn.ForeColor = System.Drawing.Color.Black;
             this.suppliersBtn.Image = ((System.Drawing.Image)(resources.GetObject("suppliersBtn.Image")));
-            this.suppliersBtn.Location = new System.Drawing.Point(314, 9);
+            this.suppliersBtn.Location = new System.Drawing.Point(313, 9);
             this.suppliersBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.suppliersBtn.Name = "suppliersBtn";
             this.suppliersBtn.Size = new System.Drawing.Size(165, 55);
@@ -208,6 +222,16 @@
             this.productsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.productsBtn.UseVisualStyleBackColor = false;
             this.productsBtn.Click += new System.EventHandler(this.productsBtn_Click);
+            // 
+            // contentPanel
+            // 
+            this.contentPanel.BackColor = System.Drawing.Color.White;
+            this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contentPanel.Location = new System.Drawing.Point(0, 96);
+            this.contentPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.contentPanel.Name = "contentPanel";
+            this.contentPanel.Size = new System.Drawing.Size(1332, 762);
+            this.contentPanel.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -243,5 +267,6 @@
         private System.Windows.Forms.ToolStripDropDownButton userMenuButton;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.Button stockMoveBtn;
     }
 }

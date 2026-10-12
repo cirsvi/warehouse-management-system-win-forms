@@ -21,6 +21,9 @@ https://smallpngtools.com/change-png-color.php
 <a href="https://www.flaticon.com/free-icons/supplier" title="supplier icons">Supplier icons created by Slameticon - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/categories" title="categories icons">Categories icons created by Creatype - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Dreamstale - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/warehouse" title="warehouse icons">Warehouse icons created by kawalanicon - Flaticon</a>
+https://www.magnific.com/author/atif-arshad/icons -  Inbox + Outbox
+https://www.magnific.com/icon/filters_17445778#fromView=search&page=1&position=8&uuid=b79c5de2-6f41-40af-81f1-7a19d64aa56c
 
 ## Project Structure
 ```

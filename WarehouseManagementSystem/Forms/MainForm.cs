@@ -74,5 +74,13 @@ namespace WarehouseManagementSystem
             view.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(view);
         }
+
+        private void stockMoveBtn_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var view = new StockMovementView();
+            view.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(view);
+        }
     }
 }
