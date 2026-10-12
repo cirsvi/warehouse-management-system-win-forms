@@ -5,9 +5,9 @@ INSERT INTO Roles (roleID, roleName) VALUES (3, 'Accountant');
 SET IDENTITY_INSERT Roles OFF;
 
 SET IDENTITY_INSERT Users ON;
-INSERT INTO Users (userID, username, passwordHash, roleID) VALUES (1, 'admin', 'hash_123', 1);
-INSERT INTO Users (userID, username, passwordHash, roleID) VALUES (2, 'w_worker', 'hash_123', 2);
-INSERT INTO Users (userID, username, passwordHash, roleID) VALUES (3, 'accountant', 'hash_123', 3);
+INSERT INTO Users (userID, username, passwordHash, roleID) VALUES (1, 'admin', '$2a$11$AQYGKD77NmA2hDCVbEjb6.Yr1bZMhXohT/0eXmqmCOY.3D.ekR.n2', 1);
+INSERT INTO Users (userID, username, passwordHash, roleID) VALUES (2, 'w_worker', '$2a$11$AQYGKD77NmA2hDCVbEjb6.Yr1bZMhXohT/0eXmqmCOY.3D.ekR.n2', 2);
+INSERT INTO Users (userID, username, passwordHash, roleID) VALUES (3, 'accountant', '$2a$11$AQYGKD77NmA2hDCVbEjb6.Yr1bZMhXohT/0eXmqmCOY.3D.ekR.n2', 3);
 SET IDENTITY_INSERT Users OFF;
 
 SET IDENTITY_INSERT Categories ON;

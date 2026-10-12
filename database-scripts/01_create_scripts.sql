@@ -103,8 +103,6 @@ CREATE TABLE StockMovements(
 
 GO
 
-CREATE UNIQUE INDEX UX_Roles_RoleName_Active ON Roles(roleName) WHERE isActive = 1;
-CREATE UNIQUE INDEX UX_Users_Username_Active ON Users(username) WHERE isActive = 1;
 CREATE UNIQUE INDEX UX_Categories_CategoryName_Active ON Categories(categoryName) WHERE isActive = 1;
 CREATE UNIQUE INDEX UX_Products_ProductName_Active ON Products(productName) WHERE isActive = 1;
 CREATE UNIQUE INDEX UX_Suppliers_SupplierName_Active ON Suppliers(supplierName) WHERE isActive = 1;

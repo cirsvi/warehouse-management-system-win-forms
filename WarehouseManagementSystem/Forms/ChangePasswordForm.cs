@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WarehouseManagementSystem.Data;
+using WarehouseManagementSystem.Helpers;
 using WarehouseManagementSystem.Models;
 using WarehouseManagementSystem.Session;
 
@@ -43,18 +44,19 @@ namespace WarehouseManagementSystem
 
                 string currentPas = repository.GetPasswordById(userId);
 
-                if (currentPas != currentPasInput.Text)
+                if (!PasswordHasher.Verify(currentPasInput.Text, currentPas))
                 {
                     MessageBox.Show("Current password does not match.");
                     return;
                 } 
 
-                if(currentPas == newPasInput.Text)
+                if(PasswordHasher.Verify(newPasInput.Text, currentPas))
                 {
                     MessageBox.Show("New password can not be the same as the old.");
                     return;
                 }
-                repository.UpdatePassword(userId, newPasInput.Text, SessionManager.UserId);
+                string newHash = PasswordHasher.Hash(newPasInput.Text);
+                repository.UpdatePassword(userId, newHash, SessionManager.UserId);
 
                 this.DialogResult = DialogResult.OK;
             } catch (Exception ex) 

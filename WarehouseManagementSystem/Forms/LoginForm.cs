@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WarehouseManagementSystem.Data;
+using WarehouseManagementSystem.Helpers;
 using WarehouseManagementSystem.Models;
 using WarehouseManagementSystem.Session;
 
@@ -39,7 +40,7 @@ namespace WarehouseManagementSystem.Forms
                     return;
                 }
 
-                if (passwordInput.Text != user.PasswordHash)
+                if (!PasswordHasher.Verify(passwordInput.Text, user.PasswordHash))
                 {
                     MessageBox.Show("Invalid username or password.");
                     return;

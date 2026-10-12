@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WarehouseManagementSystem.Data;
+using WarehouseManagementSystem.Helpers;
 using WarehouseManagementSystem.Models;
 using WarehouseManagementSystem.Session;
 
@@ -101,7 +102,8 @@ namespace WarehouseManagementSystem
                             return;
                         }
                     }
-                    repository.Insert(new User(usernameInput.Text, passwordInput.Text, (int)roleComboBox.SelectedValue));
+                    string hashedPassword = PasswordHasher.Hash(passwordInput.Text);
+                    repository.Insert(new User(usernameInput.Text, hashedPassword, (int)roleComboBox.SelectedValue));
                 }
                 else
                 {
