@@ -25,6 +25,13 @@ namespace WarehouseManagementSystem
             InitializeComponent();
             filterOption.SelectedIndex = 0;
             LoadMovements();
+
+            if (SessionManager.RoleName == "Accountant")
+            {
+                shipBtn.Hide();
+                receiveBtn.Hide();
+                deleteBtn.Hide();
+            }
         }
 
         private void LoadMovements()

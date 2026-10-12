@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WarehouseManagementSystem.Data;
 using WarehouseManagementSystem.Models;
+using WarehouseManagementSystem.Session;
 
 namespace WarehouseManagementSystem
 {
@@ -22,6 +23,17 @@ namespace WarehouseManagementSystem
         {
             InitializeComponent();
             LoadProducts();
+
+            if (SessionManager.RoleName == "Accountant")
+            {
+                newBtn.Hide();
+                editBtn.Hide();
+                deleteBtn.Hide();
+
+                addSupBtn.Hide();
+                editSupBtn.Hide();
+                remSupBtn.Hide();
+            }
         }
 
         private void LoadProducts()
@@ -176,6 +188,7 @@ namespace WarehouseManagementSystem
                 curStockVarLbl.Text = "-";
                 catNameVarLbl.Text = "-";
 
+                addSupBtn.Enabled = false;
                 editSupBtn.Enabled = false;
                 remSupBtn.Enabled = false;
 
@@ -190,8 +203,10 @@ namespace WarehouseManagementSystem
 
             PopulateSupplierGrid(selected.ProductId);
 
+            addSupBtn.Enabled = true;
             editSupBtn.Enabled = true;
             remSupBtn.Enabled = true;
+
         }
 
         private void PopulateSupplierGrid(int productId)

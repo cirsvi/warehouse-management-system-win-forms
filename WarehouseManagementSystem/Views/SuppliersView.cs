@@ -23,6 +23,17 @@ namespace WarehouseManagementSystem
         {
             InitializeComponent();
             LoadSuppliers();
+
+            if (SessionManager.RoleName == "Accountant")
+            {
+                newBtn.Hide();
+                editBtn.Hide();
+                deleteBtn.Hide();
+
+                addProdBtn.Hide();
+                editProdBtn.Hide();
+                remProdBtn.Hide();
+            }
         }
 
         private void LoadSuppliers()
@@ -182,6 +193,7 @@ namespace WarehouseManagementSystem
                 prodSupGrid.DataSource = null;
 
                 addProdBtn.Enabled = false;
+                editProdBtn.Enabled = false;
                 remProdBtn.Enabled = false;
 
                 return;
@@ -194,7 +206,9 @@ namespace WarehouseManagementSystem
             phoneVarLbl.Text = (selected.Phone.Length == 0) ? "-" : selected.Phone;
             emailVarLbl.Text = (selected.Email.Length == 0) ? "-" : selected.Email;
 
+
             addProdBtn.Enabled = true;
+            editProdBtn.Enabled = true;
             remProdBtn.Enabled = true;
 
             PopulateProduct(selected.SupplierId);

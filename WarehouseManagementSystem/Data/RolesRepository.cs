@@ -15,7 +15,7 @@ namespace WarehouseManagementSystem.Data
 
         public List<Role> GetAll()
         {
-            string query = "SELECT roleID, roleName FROM Roles WHERE isActive = 1 ORDER BY rolename";
+            string query = "SELECT roleID, roleName FROM Roles ORDER BY rolename";
             List<Role> roles = new List<Role>();
 
             using (SqlConnection conn = new SqlConnection(connection))

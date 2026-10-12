@@ -130,7 +130,7 @@
             // 
             // exportBtn
             // 
-            this.exportBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.exportBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.exportBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.exportBtn.FlatAppearance.BorderSize = 0;
             this.exportBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
@@ -139,7 +139,7 @@
             this.exportBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exportBtn.ForeColor = System.Drawing.Color.White;
             this.exportBtn.Image = ((System.Drawing.Image)(resources.GetObject("exportBtn.Image")));
-            this.exportBtn.Location = new System.Drawing.Point(485, 5);
+            this.exportBtn.Location = new System.Drawing.Point(748, 5);
             this.exportBtn.Name = "exportBtn";
             this.exportBtn.Size = new System.Drawing.Size(95, 35);
             this.exportBtn.TabIndex = 4;
@@ -150,7 +150,7 @@
             // 
             // reloadBtn
             // 
-            this.reloadBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.reloadBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.reloadBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.reloadBtn.FlatAppearance.BorderSize = 0;
             this.reloadBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
@@ -159,7 +159,7 @@
             this.reloadBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reloadBtn.ForeColor = System.Drawing.Color.White;
             this.reloadBtn.Image = ((System.Drawing.Image)(resources.GetObject("reloadBtn.Image")));
-            this.reloadBtn.Location = new System.Drawing.Point(381, 5);
+            this.reloadBtn.Location = new System.Drawing.Point(644, 5);
             this.reloadBtn.Name = "reloadBtn";
             this.reloadBtn.Size = new System.Drawing.Size(98, 35);
             this.reloadBtn.TabIndex = 3;

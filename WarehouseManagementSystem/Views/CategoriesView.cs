@@ -23,6 +23,13 @@ namespace WarehouseManagementSystem
         {
             InitializeComponent();
             LoadCategories();
+
+            if (SessionManager.RoleName == "Accountant")
+            {
+                newBtn.Hide();
+                editBtn.Hide();
+                deleteBtn.Hide();
+            }
         }
 
         private void LoadCategories()
