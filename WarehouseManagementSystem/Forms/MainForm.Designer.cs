@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.titlePanel = new System.Windows.Forms.Panel();
+            this.homeBtn = new System.Windows.Forms.Button();
             this.stockMoveBtn = new System.Windows.Forms.Button();
             this.usersBtn = new System.Windows.Forms.Button();
             this.accountTollStrip = new System.Windows.Forms.ToolStrip();
@@ -47,6 +48,7 @@
             // titlePanel
             // 
             this.titlePanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.titlePanel.Controls.Add(this.homeBtn);
             this.titlePanel.Controls.Add(this.stockMoveBtn);
             this.titlePanel.Controls.Add(this.usersBtn);
             this.titlePanel.Controls.Add(this.accountTollStrip);
@@ -60,6 +62,28 @@
             this.titlePanel.Size = new System.Drawing.Size(1332, 96);
             this.titlePanel.TabIndex = 0;
             // 
+            // homeBtn
+            // 
+            this.homeBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.homeBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.homeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeBtn.FlatAppearance.BorderSize = 0;
+            this.homeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlDark;
+            this.homeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeBtn.ForeColor = System.Drawing.Color.Black;
+            this.homeBtn.Image = ((System.Drawing.Image)(resources.GetObject("homeBtn.Image")));
+            this.homeBtn.Location = new System.Drawing.Point(149, 10);
+            this.homeBtn.Margin = new System.Windows.Forms.Padding(10, 10, 10, 100);
+            this.homeBtn.Name = "homeBtn";
+            this.homeBtn.Size = new System.Drawing.Size(123, 55);
+            this.homeBtn.TabIndex = 8;
+            this.homeBtn.Text = "Home";
+            this.homeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.homeBtn.UseVisualStyleBackColor = false;
+            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
+            // 
             // stockMoveBtn
             // 
             this.stockMoveBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -72,7 +96,7 @@
             this.stockMoveBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stockMoveBtn.ForeColor = System.Drawing.Color.Black;
             this.stockMoveBtn.Image = ((System.Drawing.Image)(resources.GetObject("stockMoveBtn.Image")));
-            this.stockMoveBtn.Location = new System.Drawing.Point(655, 9);
+            this.stockMoveBtn.Location = new System.Drawing.Point(786, 8);
             this.stockMoveBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.stockMoveBtn.Name = "stockMoveBtn";
             this.stockMoveBtn.Size = new System.Drawing.Size(234, 55);
@@ -93,7 +117,7 @@
             this.usersBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usersBtn.ForeColor = System.Drawing.Color.Black;
             this.usersBtn.Image = ((System.Drawing.Image)(resources.GetObject("usersBtn.Image")));
-            this.usersBtn.Location = new System.Drawing.Point(981, 9);
+            this.usersBtn.Location = new System.Drawing.Point(1025, 9);
             this.usersBtn.Margin = new System.Windows.Forms.Padding(10, 10, 10, 100);
             this.usersBtn.Name = "usersBtn";
             this.usersBtn.Size = new System.Drawing.Size(124, 55);
@@ -169,7 +193,7 @@
             this.categoriesBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoriesBtn.ForeColor = System.Drawing.Color.Black;
             this.categoriesBtn.Image = ((System.Drawing.Image)(resources.GetObject("categoriesBtn.Image")));
-            this.categoriesBtn.Location = new System.Drawing.Point(484, 9);
+            this.categoriesBtn.Location = new System.Drawing.Point(615, 8);
             this.categoriesBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.categoriesBtn.Name = "categoriesBtn";
             this.categoriesBtn.Size = new System.Drawing.Size(165, 55);
@@ -191,7 +215,7 @@
             this.suppliersBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.suppliersBtn.ForeColor = System.Drawing.Color.Black;
             this.suppliersBtn.Image = ((System.Drawing.Image)(resources.GetObject("suppliersBtn.Image")));
-            this.suppliersBtn.Location = new System.Drawing.Point(313, 9);
+            this.suppliersBtn.Location = new System.Drawing.Point(444, 8);
             this.suppliersBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.suppliersBtn.Name = "suppliersBtn";
             this.suppliersBtn.Size = new System.Drawing.Size(165, 55);
@@ -213,7 +237,7 @@
             this.productsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productsBtn.ForeColor = System.Drawing.Color.Black;
             this.productsBtn.Image = ((System.Drawing.Image)(resources.GetObject("productsBtn.Image")));
-            this.productsBtn.Location = new System.Drawing.Point(148, 10);
+            this.productsBtn.Location = new System.Drawing.Point(278, 9);
             this.productsBtn.Margin = new System.Windows.Forms.Padding(10, 10, 10, 100);
             this.productsBtn.Name = "productsBtn";
             this.productsBtn.Size = new System.Drawing.Size(160, 55);
@@ -268,5 +292,6 @@
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.Button stockMoveBtn;
+        private System.Windows.Forms.Button homeBtn;
     }
 }

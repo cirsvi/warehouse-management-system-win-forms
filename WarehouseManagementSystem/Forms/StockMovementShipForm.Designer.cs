@@ -1,6 +1,6 @@
 ﻿namespace WarehouseManagementSystem
 {
-    partial class StockMovementShsipForm
+    partial class StockMovementShipForm
     {
         /// <summary>
         /// Required designer variable.

@@ -97,9 +97,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(14, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 23);
+            this.label1.Size = new System.Drawing.Size(124, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Supplier Name:";
+            this.label1.Text = "Supplier name:";
             // 
             // panel4
             // 
@@ -171,9 +171,9 @@
             this.contPerLbl.AutoSize = true;
             this.contPerLbl.Location = new System.Drawing.Point(14, 13);
             this.contPerLbl.Name = "contPerLbl";
-            this.contPerLbl.Size = new System.Drawing.Size(130, 23);
+            this.contPerLbl.Size = new System.Drawing.Size(131, 23);
             this.contPerLbl.TabIndex = 0;
-            this.contPerLbl.Text = "Contact Person:";
+            this.contPerLbl.Text = "Contact person:";
             // 
             // panel5
             // 

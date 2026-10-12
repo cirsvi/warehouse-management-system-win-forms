@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WarehouseManagementSystem.Models;
 using WarehouseManagementSystem.Session;
 
 namespace WarehouseManagementSystem
@@ -22,6 +23,10 @@ namespace WarehouseManagementSystem
             {
                 usersBtn.Hide();
             }
+
+            var view = new HomeView();
+            view.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(view);
 
             userMenuButton.Text = SessionManager.Username;
         }
@@ -79,6 +84,14 @@ namespace WarehouseManagementSystem
         {
             contentPanel.Controls.Clear();
             var view = new StockMovementView();
+            view.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(view);
+        }
+
+        private void homeBtn_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var view = new HomeView();
             view.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(view);
         }

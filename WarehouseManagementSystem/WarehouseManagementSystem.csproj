@@ -121,6 +121,12 @@
       <DependentUpon>ProductAddEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Views\HomeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\HomeView.Designer.cs">
+      <DependentUpon>HomeView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\MovementType.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Role.cs" />
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductAddEditForm.resx">
       <DependentUpon>ProductAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HomeView.resx">
+      <DependentUpon>HomeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StockMovementView.resx">
       <DependentUpon>StockMovementView.cs</DependentUpon>

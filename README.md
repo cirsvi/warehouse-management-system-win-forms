@@ -24,6 +24,7 @@ https://smallpngtools.com/change-png-color.php
 <a href="https://www.flaticon.com/free-icons/warehouse" title="warehouse icons">Warehouse icons created by kawalanicon - Flaticon</a>
 https://www.magnific.com/author/atif-arshad/icons -  Inbox + Outbox
 https://www.magnific.com/icon/filters_17445778#fromView=search&page=1&position=8&uuid=b79c5de2-6f41-40af-81f1-7a19d64aa56c
+<a target="_blank" href="https://icons8.com/icon/83326/home">Home</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 ## Project Structure
 ```

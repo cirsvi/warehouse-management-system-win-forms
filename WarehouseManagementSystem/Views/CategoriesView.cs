@@ -166,5 +166,34 @@ namespace WarehouseManagementSystem
             List<Category> searchedCategories = categories.Where(u => u.CategoryName.IndexOf(search, StringComparison.OrdinalIgnoreCase) >= 0).ToList();
             gridCategories.DataSource = searchedCategories;
         }
+
+        private void gridCategories_SelectionChanged(object sender, EventArgs e)
+        {
+            if (gridCategories.CurrentRow == null)
+            {
+                catNameLbl.Text = "Please, select a category.";
+                prodCountVarLbl.Text = "-";
+                return;
+            }
+
+            try
+            {
+                Category selected = (Category)gridCategories.CurrentRow.DataBoundItem;
+                catNameLbl.Text = selected.CategoryName;
+                prodCountVarLbl.Text = selected.ProductCount.ToString();
+
+                ProductRepository repository = new ProductRepository();
+                List<Product> products = repository.GetAll();
+                List<Product> selectedProducts = products.Where(p => p.ProductCategoryId == selected.CategoryID).ToList();
+
+                prodGrid.AutoGenerateColumns = false;
+                prodGrid.DataSource = selectedProducts;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong. Try again!\nError: {ex.Message}");
+                return;
+            }
+        }
     }
 }

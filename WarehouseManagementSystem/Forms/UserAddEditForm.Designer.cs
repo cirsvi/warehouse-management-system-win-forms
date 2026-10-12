@@ -228,9 +228,9 @@
             this.repPasswordLbl.AutoSize = true;
             this.repPasswordLbl.Location = new System.Drawing.Point(14, 13);
             this.repPasswordLbl.Name = "repPasswordLbl";
-            this.repPasswordLbl.Size = new System.Drawing.Size(142, 23);
+            this.repPasswordLbl.Size = new System.Drawing.Size(143, 23);
             this.repPasswordLbl.TabIndex = 0;
-            this.repPasswordLbl.Text = "Repeat Password:";
+            this.repPasswordLbl.Text = "Repeat password:";
             // 
             // UserAddEditForm
             // 

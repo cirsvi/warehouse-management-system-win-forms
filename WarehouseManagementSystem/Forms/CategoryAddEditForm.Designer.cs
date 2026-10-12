@@ -85,9 +85,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(14, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 23);
+            this.label1.Size = new System.Drawing.Size(131, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Category Name:";
+            this.label1.Text = "Category name:";
             // 
             // panel4
             // 

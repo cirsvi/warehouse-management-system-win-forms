@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoriesView));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.searchIcon = new System.Windows.Forms.PictureBox();
             this.searchBox = new System.Windows.Forms.TextBox();
@@ -46,10 +48,30 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.usersLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.prodGrid = new System.Windows.Forms.DataGridView();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.suppliersLbl = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.prodCountVarLbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.catNameLbl = new System.Windows.Forms.Label();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CurrentStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCategories)).BeginInit();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.prodGrid)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -218,7 +240,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridCategories.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridCategories.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridCategories.Location = new System.Drawing.Point(0, 90);
+            this.gridCategories.Location = new System.Drawing.Point(3, 3);
             this.gridCategories.MultiSelect = false;
             this.gridCategories.Name = "gridCategories";
             this.gridCategories.ReadOnly = true;
@@ -226,8 +248,9 @@
             this.gridCategories.RowHeadersWidth = 51;
             this.gridCategories.RowTemplate.Height = 24;
             this.gridCategories.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridCategories.Size = new System.Drawing.Size(1200, 410);
+            this.gridCategories.Size = new System.Drawing.Size(774, 404);
             this.gridCategories.TabIndex = 2;
+            this.gridCategories.SelectionChanged += new System.EventHandler(this.gridCategories_SelectionChanged);
             // 
             // CategoryName
             // 
@@ -271,12 +294,177 @@
             this.panel1.Size = new System.Drawing.Size(1200, 44);
             this.panel1.TabIndex = 0;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gridCategories, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 90);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1200, 410);
+            this.tableLayoutPanel1.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.panel9);
+            this.panel3.Controls.Add(this.panel7);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(783, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(414, 404);
+            this.panel3.TabIndex = 4;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.prodGrid);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(0, 102);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(414, 302);
+            this.panel9.TabIndex = 7;
+            // 
+            // prodGrid
+            // 
+            this.prodGrid.AllowUserToAddRows = false;
+            this.prodGrid.AllowUserToDeleteRows = false;
+            this.prodGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.prodGrid.BackgroundColor = System.Drawing.Color.White;
+            this.prodGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.prodGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.prodGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.prodGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductName,
+            this.CurrentStock});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.prodGrid.DefaultCellStyle = dataGridViewCellStyle4;
+            this.prodGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.prodGrid.Location = new System.Drawing.Point(0, 0);
+            this.prodGrid.MultiSelect = false;
+            this.prodGrid.Name = "prodGrid";
+            this.prodGrid.ReadOnly = true;
+            this.prodGrid.RowHeadersVisible = false;
+            this.prodGrid.RowHeadersWidth = 51;
+            this.prodGrid.RowTemplate.Height = 24;
+            this.prodGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.prodGrid.Size = new System.Drawing.Size(414, 302);
+            this.prodGrid.TabIndex = 3;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.suppliersLbl);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 68);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(414, 34);
+            this.panel7.TabIndex = 5;
+            // 
+            // suppliersLbl
+            // 
+            this.suppliersLbl.AutoSize = true;
+            this.suppliersLbl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.suppliersLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suppliersLbl.Location = new System.Drawing.Point(0, 0);
+            this.suppliersLbl.Name = "suppliersLbl";
+            this.suppliersLbl.Size = new System.Drawing.Size(100, 28);
+            this.suppliersLbl.TabIndex = 1;
+            this.suppliersLbl.Text = "Products:";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.prodCountVarLbl);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 34);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(414, 34);
+            this.panel5.TabIndex = 3;
+            // 
+            // prodCountVarLbl
+            // 
+            this.prodCountVarLbl.AutoSize = true;
+            this.prodCountVarLbl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.prodCountVarLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prodCountVarLbl.Location = new System.Drawing.Point(157, 0);
+            this.prodCountVarLbl.Name = "prodCountVarLbl";
+            this.prodCountVarLbl.Size = new System.Drawing.Size(167, 28);
+            this.prodCountVarLbl.TabIndex = 2;
+            this.prodCountVarLbl.Text = "actual prod count";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 28);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Product count: ";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.catNameLbl);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(414, 34);
+            this.panel4.TabIndex = 2;
+            // 
+            // catNameLbl
+            // 
+            this.catNameLbl.AutoSize = true;
+            this.catNameLbl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.catNameLbl.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.catNameLbl.Location = new System.Drawing.Point(0, 0);
+            this.catNameLbl.Name = "catNameLbl";
+            this.catNameLbl.Size = new System.Drawing.Size(180, 31);
+            this.catNameLbl.TabIndex = 1;
+            this.catNameLbl.Text = "Category Name";
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "ProductName";
+            this.ProductName.HeaderText = "Product";
+            this.ProductName.MinimumWidth = 6;
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            // 
+            // CurrentStock
+            // 
+            this.CurrentStock.DataPropertyName = "CurrentStock";
+            this.CurrentStock.HeaderText = "Current Stock";
+            this.CurrentStock.MinimumWidth = 6;
+            this.CurrentStock.Name = "CurrentStock";
+            this.CurrentStock.ReadOnly = true;
+            // 
             // CategoriesView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.gridCategories);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "CategoriesView";
@@ -287,6 +475,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridCategories)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.prodGrid)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -306,5 +504,18 @@
         private System.Windows.Forms.PictureBox searchIcon;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductCount;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.DataGridView prodGrid;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label suppliersLbl;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label prodCountVarLbl;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label catNameLbl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CurrentStock;
     }
 }

@@ -89,9 +89,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(14, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 23);
+            this.label1.Size = new System.Drawing.Size(122, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Product Name";
+            this.label1.Text = "Product name:";
             // 
             // panel3
             // 
@@ -116,9 +116,9 @@
             this.categoryLabel.AutoSize = true;
             this.categoryLabel.Location = new System.Drawing.Point(14, 11);
             this.categoryLabel.Name = "categoryLabel";
-            this.categoryLabel.Size = new System.Drawing.Size(79, 23);
+            this.categoryLabel.Size = new System.Drawing.Size(83, 23);
             this.categoryLabel.TabIndex = 1;
-            this.categoryLabel.Text = "Category";
+            this.categoryLabel.Text = "Category:";
             // 
             // panel4
             // 
